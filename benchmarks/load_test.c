@@ -26,7 +26,7 @@
 
 #include <stdint.h>
 
-#include <libusockets.h>
+#include <uWebSockets/usockets.h>
 int SSL;
 
 #include <stdio.h>

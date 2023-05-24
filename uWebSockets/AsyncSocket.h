@@ -27,7 +27,7 @@
 #include <cstring>
 #include <iostream>
 
-#include "libusockets.h"
+#include <usockets/usockets.h>
 
 #include "LoopData.h"
 #include "AsyncSocketData.h"

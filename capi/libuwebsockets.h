@@ -26,7 +26,7 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include <stdint.h>
-#include "libusockets.h"
+#include <usockets/usockets.h>
 
 #ifdef __cplusplus
 extern "C"

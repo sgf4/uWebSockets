@@ -1,5 +1,5 @@
-#include "../libuwebsockets.h"
-#include "libusockets.h"
+#include <usockets/usockets.h>
+#include <uWebSockets/App.h>
 
 #include <stdio.h>
 #include <malloc.h>
