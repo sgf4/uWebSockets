@@ -7,3 +7,4 @@
 [submodule "uSockets"]
 	path = uSockets
 	url = https://github.com/sgf4/usockets
+    branch = master
