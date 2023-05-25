@@ -2,6 +2,7 @@
 cmake_minimum_required(VERSION 3.14)
 
 project(uwebsockets)
+option(WITH_ZLIB "Enables ZLIB compression" OFF)
 
 add_library(
   uwebsockets
@@ -11,9 +12,13 @@ add_library(
 add_subdirectory(uSockets)
 target_link_libraries(uwebsockets INTERFACE usockets)
 
-find_package(ZLIB REQUIRED)
-target_include_directories(uwebsockets INTERFACE ${ZLIB_INCLUDE_DIRS})
-target_link_libraries(uwebsockets INTERFACE ${ZLIB_LIBRARIES})
+if (WITH_ZLIB)
+    find_package(ZLIB REQUIRED)
+    target_include_directories(uwebsockets INTERFACE ${ZLIB_INCLUDE_DIRS})
+    target_link_libraries(uwebsockets INTERFACE ${ZLIB_LIBRARIES})
+else()
+    target_compile_definitions(uwebsockets INTERFACE UWS_NO_ZLIB)
+endif()
 
 target_include_directories(uwebsockets INTERFACE
   $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
