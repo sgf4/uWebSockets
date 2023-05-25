@@ -6,4 +6,4 @@
 	url = https://github.com/uNetworking/seed-corpus.git
 [submodule "uSockets"]
 	path = uSockets
-	url = https://github.com/sgf4/uSockets
+	url = https://github.com/sgf4/usockets
